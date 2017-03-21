@@ -1,15 +1,23 @@
-h1 {
+body {
   font-family: 'Source Sans Pro', sans-serif;
-  text-align: center;
+  background-color: white;
+}
+h4 {
   font-weight: bold;
 }
-body {
-  margin-top: 100px;
+p {
+  font-size: 1em;
 }
-.social {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 1.5em;
-  width: 2em;
+.col-lg-6 {
+  text-align: justify;
+}
+a {
+  text-align: right;
+  font-weight: 900;
+}
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
 }
