@@ -1,6 +1,5 @@
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: white;
+  font-family: 'Inter', sans-serif;
 }
 h4 {
   font-weight: bold;
@@ -20,4 +19,20 @@ a {
 }
 .alignright {
 	float: right;
+}
+
+button {
+  background-color: #4C566A;
+  color: white;
+}
+
+.form-div {
+  width: 80%;
+  margin: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+input {
+  margin: 0.5em;
 }
