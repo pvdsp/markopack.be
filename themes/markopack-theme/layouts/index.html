@@ -1,0 +1,176 @@
+{{ define "main" }}
+<div class="hero-section">
+    {{ if eq .Site.Language.Lang "nl" }}
+    <h1>Welkom bij Markopack Belux</h1>
+    <p>Markopack is uw aangewezen partner in de regio Belux voor het markeren van uw producten en onderdelen.</p>
+    <a href="#contact" class="cta-button">Contacteer ons</a>
+    {{ else if eq .Site.Language.Lang "fr" }}
+    <h1>Bienvenue chez Markopack Belux</h1>
+    <p>Markopack est votre partenaire de choix dans la région Belux pour le marquage de vos produits et composants.</p>
+    <a href="#contact" class="cta-button">Contactez-nous</a>
+    {{ else }}
+    <h1>Welcome to Markopack Belux</h1>
+    <p>Markopack is your preferred partner in the Belux region for marking your products and components.</p>
+    <a href="#contact" class="cta-button">Contact us</a>
+    {{ end }}
+</div>
+
+<section class="content-section">
+    {{ .Content }}
+
+    <!-- Products Grid -->
+    <div id="products" class="products-grid">
+        <div class="product-card">
+            {{ if eq .Site.Language.Lang "nl" }}
+            <h3>Pinstamp en lasermarkering</h3>
+            <p>Het permanent markeren van onderdelen. Zorg voor traceerbaarheid van uw producten met vaste data, variabele informatie, alfanumerieke tekens, serienummers, sequentiële nummering, datering, datamatrix codes en logo's.</p>
+            {{ else if eq .Site.Language.Lang "fr" }}
+            <h3>Pinstamp et marquage laser</h3>
+            <p>Le marquage permanent de composants. Assurez la traçabilité de vos produits avec des données fixes, des informations variables, des caractères alphanumériques, des numéros de série, une numérotation séquentielle, une datation, des codes datamatrix et des logos.</p>
+            {{ else }}
+            <h3>Pinstamp and laser marking</h3>
+            <p>Permanent marking of components. Ensure product traceability with fixed data, variable information, alphanumeric characters, serial numbers, sequential numbering, dating, datamatrix codes, and logos.</p>
+            {{ end }}
+        </div>
+
+        <div class="product-card">
+            {{ if eq .Site.Language.Lang "nl" }}
+            <h3>Telesis Technologies<small>A Hitachi Group Company</small></h3>
+            <p>Markopack biedt markeersystemen van Telesis Technologies die robuust en betrouwbaar zijn. Deze industriële laser- en dot peen-markeersystemen functioneren betrouwbaar in diverse industriële omgevingen wereldwijd.</p>
+            {{ else if eq .Site.Language.Lang "fr" }}
+            <h3>Telesis Technologies<small>A Hitachi Group Company</small></h3>
+            <p>Markopack propose des systèmes de marquage de Telesis Technologies qui sont robustes et fiables. Ces systèmes de marquage laser et par micro-percussion industriels fonctionnent de manière fiable dans divers environnements industriels du monde entier.</p>
+            {{ else }}
+            <h3>Telesis Technologies<small>A Hitachi Group Company</small></h3>
+            <p>Markopack offers marking systems from Telesis Technologies that are robust and reliable. These industrial laser and dot peen marking systems function reliably across diverse industrial settings globally.</p>
+            {{ end }}
+        </div>
+
+        <div class="product-card">
+            {{ if eq .Site.Language.Lang "nl" }}
+            <h3>After-Sales Service</h3>
+            <p>Gelegen nabij Brussel, onderhoudt het bedrijf een eigen voorraad onderdelen om snelle en efficiënte ondersteuning te bieden voor graveer- en pinmarkeerapparatuur na aankoop.</p>
+            {{ else if eq .Site.Language.Lang "fr" }}
+            <h3>Service Après-Vente</h3>
+            <p>Située près de Bruxelles, l'entreprise maintient son propre stock de pièces pour fournir un support rapide et efficace pour les équipements de gravure et de marquage par poinçonnage après l'achat.</p>
+            {{ else }}
+            <h3>After-Sales Service</h3>
+            <p>Located near Brussels, the company maintains its own parts inventory to provide quick and efficient post-purchase support for engraving and pin marking equipment.</p>
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+        <div class="gallery-item">
+            <img src="{{ "images/20190312_110446.jpg" | relURL }}" alt="Marking System 1">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{{ "images/20200205_140242.jpg" | relURL }}" alt="Marking System 2">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{{ "images/20200206_174249.jpg" | relURL }}" alt="Marking System 3">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{{ "images/20220519_130311~2.jpg" | relURL }}" alt="Marking System 4">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{{ "images/20250326_172045.jpg" | relURL }}" alt="Marking System 5">
+        </div>
+
+        <div class="gallery-item">
+            <img src="{{ "images/20250328_114128.jpg" | relURL }}" alt="Marking System 6">
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    {{ if eq .Site.Language.Lang "nl" }}
+    <h2 style="text-align: center;">Contacteer ons</h2>
+    <p>Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met u op.</p>
+    {{ else if eq .Site.Language.Lang "fr" }}
+    <h2 style="text-align: center;">Contactez-nous</h2>
+    <p>Remplissez le formulaire ci-dessous et nous vous contacterons dès que possible.</p>
+    {{ else }}
+    <h2 style="text-align: center;">Contact us</h2>
+    <p>Fill in the form below and we'll get back to you as soon as possible.</p>
+    {{ end }}
+
+    <form class="contact-form" action="https://markopack.us17.list-manage.com/subscribe/post?u=52fb9be2ca762cf1dda396228&amp;id=5655b662ba&amp;f_id=0034eee3f0" method="POST" target="_blank">
+        <!-- Honeypot field for spam prevention -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_52fb9be2ca762cf1dda396228_5655b662ba" tabindex="-1" value="">
+        </div>
+
+        <div class="form-group">
+            {{ if eq .Site.Language.Lang "nl" }}
+            <label for="mce-EMAIL">E-mailadres <span style="color: var(--markopack-accent);">*</span></label>
+            <input type="email" autocapitalize="off" autocorrect="off" id="mce-EMAIL" name="EMAIL" class="required email" required placeholder="uw.email@voorbeeld.be">
+            {{ else if eq .Site.Language.Lang "fr" }}
+            <label for="mce-EMAIL">Adresse e-mail <span style="color: var(--markopack-accent);">*</span></label>
+            <input type="email" autocapitalize="off" autocorrect="off" id="mce-EMAIL" name="EMAIL" class="required email" required placeholder="votre.email@exemple.be">
+            {{ else }}
+            <label for="mce-EMAIL">Email Address <span style="color: var(--markopack-accent);">*</span></label>
+            <input type="email" autocapitalize="off" autocorrect="off" id="mce-EMAIL" name="EMAIL" class="required email" required placeholder="your.email@example.com">
+            {{ end }}
+        </div>
+
+        <div class="form-group">
+            {{ if eq .Site.Language.Lang "nl" }}
+            <label for="mce-COMPANY">Bedrijf</label>
+            <input type="text" id="mce-COMPANY" name="COMPANY" placeholder="Uw bedrijfsnaam">
+            {{ else if eq .Site.Language.Lang "fr" }}
+            <label for="mce-COMPANY">Entreprise</label>
+            <input type="text" id="mce-COMPANY" name="COMPANY" placeholder="Nom de votre entreprise">
+            {{ else }}
+            <label for="mce-COMPANY">Company</label>
+            <input type="text" id="mce-COMPANY" name="COMPANY" placeholder="Your company name">
+            {{ end }}
+        </div>
+
+        <div class="form-group">
+            {{ if eq .Site.Language.Lang "nl" }}
+            <label for="mce-NAME">Contactpersoon</label>
+            <input type="text" id="mce-NAME" name="NAME" placeholder="Uw naam">
+            {{ else if eq .Site.Language.Lang "fr" }}
+            <label for="mce-NAME">Personne de contact</label>
+            <input type="text" id="mce-NAME" name="NAME" placeholder="Votre nom">
+            {{ else }}
+            <label for="mce-NAME">Contact Person</label>
+            <input type="text" id="mce-NAME" name="NAME" placeholder="Your name">
+            {{ end }}
+        </div>
+
+        <div class="form-group">
+            {{ if eq .Site.Language.Lang "nl" }}
+            <label for="mce-MMERGE3">Bericht <span class="char-limit-hint">(max. 250 tekens)</span></label>
+            <textarea id="mce-MMERGE3" name="MMERGE3" maxlength="250" placeholder="Uw bericht..."></textarea>
+            <div class="char-counter"><span id="char-count">0</span>/250</div>
+            {{ else if eq .Site.Language.Lang "fr" }}
+            <label for="mce-MMERGE3">Message <span class="char-limit-hint">(max. 250 caractères)</span></label>
+            <textarea id="mce-MMERGE3" name="MMERGE3" maxlength="250" placeholder="Votre message..."></textarea>
+            <div class="char-counter"><span id="char-count">0</span>/250</div>
+            {{ else }}
+            <label for="mce-MMERGE3">Message <span class="char-limit-hint">(max. 250 characters)</span></label>
+            <textarea id="mce-MMERGE3" name="MMERGE3" maxlength="250" placeholder="Your message..."></textarea>
+            <div class="char-counter"><span id="char-count">0</span>/250</div>
+            {{ end }}
+        </div>
+
+        <button type="submit" class="submit-button">
+            {{ if eq .Site.Language.Lang "nl" }}
+            Verstuur
+            {{ else if eq .Site.Language.Lang "fr" }}
+            Envoyer
+            {{ else }}
+            Send
+            {{ end }}
+        </button>
+    </form>
+</section>
+{{ end }}

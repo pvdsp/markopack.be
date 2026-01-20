@@ -1,0 +1,79 @@
+baseURL = 'https://markopack.be/'
+title = 'Markopack Belux'
+theme = 'markopack-theme'
+buildFuture = true
+defaultContentLanguage = 'nl'
+
+[languages]
+  [languages.nl]
+    languageCode = 'nl'
+    languageName = 'Nederlands'
+    weight = 1
+    title = 'Markopack Belux'
+    [languages.nl.params]
+      description = 'Het permanent markeren van onderdelen - Pinstamp en Telesis Technologies (A Hitachi Group Company) voor Belux'
+
+  [languages.en]
+    languageCode = 'en'
+    languageName = 'English'
+    weight = 2
+    title = 'Markopack Belux'
+    [languages.en.params]
+      description = 'Permanent marking of components - Pinstamp and Telesis Technologies (A Hitachi Group Company) for Belux'
+
+  [languages.fr]
+    languageCode = 'fr'
+    languageName = 'Français'
+    weight = 3
+    title = 'Markopack Belux'
+    [languages.fr.params]
+      description = 'Marquage permanent de composants - Pinstamp et Telesis Technologies (A Hitachi Group Company) pour le Belux'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  logo = "images/logos/logo.svg"
+  socialImage = "images/logos/logo.svg"
+
+  [params.contact]
+    email = 'info@markopack.be'
+
+  [params.social]
+    instagram = 'https://www.instagram.com/markopack_belux/'
+    linkedin = 'https://linkedin.com/company/markopack-belux'
+
+# Dutch Menu
+[[languages.nl.menu.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+[[languages.nl.menu.main]]
+  name = 'Contact'
+  url = '#contact'
+  weight = 2
+
+# English Menu
+[[languages.en.menu.main]]
+  name = 'Home'
+  url = '/en/'
+  weight = 1
+
+[[languages.en.menu.main]]
+  name = 'Contact'
+  url = '#contact'
+  weight = 2
+
+# French Menu
+[[languages.fr.menu.main]]
+  name = 'Accueil'
+  url = '/fr/'
+  weight = 1
+
+[[languages.fr.menu.main]]
+  name = 'Contact'
+  url = '#contact'
+  weight = 2

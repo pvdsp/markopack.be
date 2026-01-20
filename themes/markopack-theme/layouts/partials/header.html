@@ -1,0 +1,41 @@
+<header class="site-header">
+    <div class="header-container">
+        <div class="header-left">
+            <div class="logo">
+                <a href="{{ "/" | relLangURL }}">
+                    {{ if .Site.Params.logo }}
+                    <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}" class="logo-image">
+                    {{ else }}
+                    <span class="logo-text">{{ .Site.Title }}</span>
+                    {{ end }}
+                </a>
+            </div>
+        </div>
+
+        <nav class="main-navigation">
+            <ul class="nav-menu">
+                {{ range .Site.Menus.main }}
+                <li class="nav-item">
+                    <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                {{ range .Site.Languages }}
+                <a href="/{{ .Lang }}/" class="language-link{{ if eq $.Site.Language.Lang .Lang }} active{{ end }}">
+                    {{ .LanguageName }}
+                </a>
+                {{ end }}
+            </div>
+        </nav>
+
+        <!-- Mobile menu toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>

@@ -1,0 +1,64 @@
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-columns">
+            <div class="footer-column footer-about">
+                {{ if eq .Site.Language.Lang "nl" }}
+                <h3>Over Markopack Belux</h3>
+                <p>
+                    Markopack is uw aangewezen partner in de regio Belux voor het markeren van uw producten en onderdelen.
+                </p>
+                {{ else if eq .Site.Language.Lang "fr" }}
+                <h3>À propos de Markopack Belux</h3>
+                <p>
+                    Markopack est votre partenaire de choix dans la région Belux pour le marquage de vos produits et composants.
+                </p>
+                {{ else }}
+                <h3>About Markopack Belux</h3>
+                <p>
+                    Markopack is your preferred partner in the Belux region for marking your products and components.
+                </p>
+                {{ end }}
+            </div>
+
+            <div class="footer-column footer-contact">
+                {{ if eq .Site.Language.Lang "nl" }}
+                <h3>Contact</h3>
+                {{ else if eq .Site.Language.Lang "fr" }}
+                <h3>Contact</h3>
+                {{ else }}
+                <h3>Contact</h3>
+                {{ end }}
+
+                <p style="margin-top: 8px; font-size: 14px; line-height: 1.4;">
+                    Markopack Belux<br>
+                    {{ if .Site.Params.contact.email }}
+                    <a href="mailto:{{ .Site.Params.contact.email }}" style="color: rgba(255, 255, 255, 0.9);">
+                        {{ .Site.Params.contact.email }}
+                    </a>
+                    {{ end }}
+                </p>
+
+                {{ with .Site.Params.social }}
+                <div class="footer-social-links">
+                    {{ if .instagram }}
+                    <a href="{{ .instagram }}" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram social-icon"></i>
+                    </a>
+                    {{ end }}
+                    {{ if .linkedin }}
+                    <a href="{{ .linkedin }}" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin social-icon"></i>
+                    </a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">
+                <span class="copyright-brand">&copy; {{ now.Year }} Markopack Belux</span>
+            </p>
+        </div>
+    </div>
+</footer>
